@@ -241,8 +241,14 @@
             transition: all 300ms ease-in-out;
         }
 
-        .main-footer a:hover{
-            filter: brightness(1.8);
+        .main-contant-detail .recipe-list-item{
+            margin: 0 auto;
+            max-width: 84rem;
+            border-radius: 5px;
+            box-shadow: -5px 5px 10px rgba(0,0,0,0.2);
         }
 
-   
+        .main-contant-detail .recipe-list-item:hover{
+            transform: scale(1);
+            box-shadow: -5px 5px 10px rgba(0,0,0,0.2);
+        }
