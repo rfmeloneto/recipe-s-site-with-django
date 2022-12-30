@@ -154,7 +154,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(340px,1fr));
             gap: var(--spacing-gutter-large);
-            grid-auto-rows: 1fr;
+           
             
         }
 
@@ -260,5 +260,7 @@
         .preparation-steps{
             padding: 2rem 3rem;
         }
+
+
 
         
