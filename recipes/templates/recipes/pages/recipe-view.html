@@ -4,7 +4,9 @@
 {% endblock title %}
     {% block content %}
     <div class="main-contant main-contant-detail container">
+      {% for r in recipe %}
         {% include "recipes/partial/recipes.html" %}
+      {% endfor %}
     </div>
     {% endblock content %}
     

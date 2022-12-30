@@ -10,5 +10,5 @@ def home(request):
 
 def recipes(request,id):
     return render(request, 'recipes/pages/recipe-view.html', context={
-        'recipe': rf.make_recipe()
+        'recipe': [rf.make_recipe()]
     })
