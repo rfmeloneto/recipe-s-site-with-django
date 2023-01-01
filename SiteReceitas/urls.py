@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf.urls.static import static #para a imagem e static na url
+from django.conf import settings #para a imagem e static na url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('recipes.urls'))
 ]
+
+#comando para carregar a imagem na url
+urlpatterns += static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
+
+#comando para carregar static na url
+urlpatterns += static(settings.STATIC_URL, document_root= settings.STATIC_ROOT)
