@@ -20,7 +20,7 @@ from django.conf import settings #para a imagem e static na url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('recipes.urls'))
+    path('', include('recipes.urls')),
 ]
 
 #comando para carregar a imagem na url

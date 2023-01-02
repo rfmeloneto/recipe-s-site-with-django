@@ -53,6 +53,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'SiteReceitas.urls'
 
+#Declaração do Local dos Templates
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -119,12 +120,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+# Adicionado o caminho para buscar os arquivos estáticos em uma pasta DENTRO de um app
 STATIC_URL = '/static/'
+# aqui pode adicionar vários caminhos para arquivos estáticos fora do app 
 STATICFILES_DIRS=[
     BASE_DIR/'base_static'
 ]
+#Raiz dos arquivos estáticos
 STATIC_ROOT= BASE_DIR/'static'
 
+# Local dos Arquivos de Mídia
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR /'media'
 
