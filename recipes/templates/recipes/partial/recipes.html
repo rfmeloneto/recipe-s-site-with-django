@@ -9,7 +9,9 @@
                     <span class="recipe-author-item">
                         <i class="fas fa-user"></i>
                         {% if r.author.first_name %}
+                        <a href="{% url 'recipes:author' r.author.id%}">
                             {{r.author.first_name}} {{r.author.last_name}}
+                        </a>
                         {% else %}
                             {{r.author.username}}
                         {% endif %}
