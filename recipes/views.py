@@ -21,3 +21,9 @@ def category(request, category_id):
     return render(request , 'recipes/pages/category.html', context={
         'recipes': recipe, 
     })
+
+def author(request, author_id):
+    recipe = Recipe.objects.filter(author__id=author_id, is_published=True).order_by('-id')
+    return render(request , 'recipes/pages/author.html', context={
+        'recipes': recipe, 
+    })
