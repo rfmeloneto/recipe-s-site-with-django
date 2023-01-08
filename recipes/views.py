@@ -11,9 +11,11 @@ def home(request):
 
 
 def recipes(request,id):
+    recipe = Recipe.objects.filter(id = id)
     return render(request, 'recipes/pages/recipe-view.html', context={
-        'recipe': [rf.make_recipe()],
-        'is_detail_page':True
+        'recipe': recipe,
+        'is_detail_page':True,
+        'title': f'{Recipe.objects.first().title}',
     })
 
 def category(request, category_id):
@@ -27,5 +29,6 @@ def author(request, author_id):
     recipe = Recipe.objects.filter(author__id = author_id)
     return render(request, 'recipes/pages/author.html', context={
         'recipes' : recipe,
+        'title' : f'{Recipe.objects.first().author.first_name} | author'
     })
 
