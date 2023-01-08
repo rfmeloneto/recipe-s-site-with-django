@@ -7,8 +7,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('recipes/<int:id>/', views.recipes, name='recipe'),
     path('recipes/category/<int:category_id>/', views.category, name='category'),
-<<<<<<< HEAD
-=======
-    path('recipes/author/<int:author_id>', views.author, name='author')
->>>>>>> 3a42440f7c362dea72fc2b504d7e74d0fbd2a080
+    path('recipes/author/<int:author_id>/', views.author, name='author'),
 ]

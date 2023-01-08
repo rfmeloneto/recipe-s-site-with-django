@@ -5,18 +5,21 @@
                 <div class="recipe title container">
                     <h2 class="recipe-title">{{r.title}}</h2>
                 </div>
-                <div class="recipe-author">   
+                <div class="recipe-author"> 
                     <span class="recipe-author-item">
                         <i class="fas fa-user"></i>
+                    {% if r.author is not None%}  
+                    <a href="{% url 'recipes:author' r.author.id %}">
                         {% if r.author.first_name %}
-                        <a href="{% url 'recipes:author' r.author.id%}">
                             {{r.author.first_name}} {{r.author.last_name}}
-                        </a>
                         {% else %}
                             {{r.author.username}}
                         {% endif %}
+                    </a>
+                    {% else %}
+                        Desconhecido
+                    {% endif %}
                     </span>
-                
                     <span class="recipe-author-item">
                         <i class="fas fa-calendar-alt"></i>
                         {{r.created_at|date:"d/m/Y"}} ás {{r.created_at|date:"H:i"}}
